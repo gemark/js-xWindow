@@ -40,7 +40,10 @@ class xWindow{
         this.winObj = $(document.createElement('div'));
         this.winObj.get(0).selfRef = this;
         this.winObj.addClass("win-basic");
-        this.winObj.draggable();
+        this.winObj.draggable({
+            cursor: "move",                 // 鼠标的光标样式
+            handle: ".win-basic-titlebar",  // 拖动应用在标题栏，其他地方无效
+        });
         this.winObj.resizable();
         this.winObj.css({
             minWidth: this.getWinProp("winMinWidth"),
@@ -57,6 +60,13 @@ class xWindow{
             let h = (100 - (titleBar.height()/(parent.height()/100))) + "%";
             contentArea.height(h);
         })
+        this.winObj.on("drag", function(e){
+            let parent = $(e.target).parent().get(0);
+            let elm = $(e.target).get(0);
+            if(elm.className != "win-basic-titlebar"){
+                return;
+            }
+        });
         pDOM.append(this.winObj);
     }
     __createTitleBar(){

@@ -1,5 +1,10 @@
 # js-xWindow
 
+# 依赖
+`js-xWindow`依赖于：
+    1. jQuery 3.x
+    2. jQueryUI 1.12.x
+
 # 使用方法
 `Example:`
 ```javascript
