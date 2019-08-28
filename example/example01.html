@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../external/jquery/jq-ui-css/jquery-ui.css">
+    <link rel="stylesheet" href="../css/xwin.css">
+    <script src="../external/jquery/jquery.js"></script>
+    <script src="../external/jquery/jquery-ui.js"></script>
+    <script src="../external/mockjs/mock.js"></script>
+    <script src="../xWindow.js"></script>
+    <title>JS窗口类封装测试</title>
+</head>
+<body>
+    <script>        
+        $(function(){
+            var win = new xWindow({
+                iconPath: Mock.Random.dataImage("32x32", "SB"),
+                titleText: "我是一个窗口对象",
+                closeButtonImage: Mock.Random.dataImage("24x24", "X"),
+                winMinWidth: 200,
+                winMinHeight: 200,
+                winWidth: 320,
+                winHeight: 480,
+                titleBarHeight: 40,
+                dontClose: false,
+            });
+            win.create($('body'));
+        });
+    </script>
+</body>
+</html>
