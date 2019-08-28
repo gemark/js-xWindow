@@ -1,0 +1,69 @@
+/*
+   _____       __   __             _  __ 
+  ╱ ____|     |  ╲/   |           | |/ / 
+ | |  __  ___ |  ╲ /  | __  _ _ __| ' /  
+ | | |_ |/ _ ╲| |╲ /| |/ _`  | '__|  <   
+ | |__| |  __/| |   | (  _|  | |  | . ╲  
+  ╲_____|╲___ |_|   |_|╲__,_ |_|  |_|╲_╲ 
+ 可爱飞行猪❤: golang83@outlook.com  💯💯💯
+ Author Name: GeMarK.VK.Chow奥迪哥  🚗🔞🈲
+ Creaet Time: 2019/08/28 - 10:56:01
+ ProgramFile: xwin.css
+ Description: Web 窗口对象的基本样式表
+*/
+
+/* 窗口基本样式 */
+.win-basic {
+    /* 定位的性质 */
+    position: relative;
+    display: inline-block;
+
+    /* 窗口的外观风格设置 */
+    background-color: aliceblue;
+    border: 1px solid gray;
+    border-radius: 5px;
+
+    /* 超出的部分进行隐藏 */
+    overflow: hidden;
+}
+
+/* 窗口的标题栏基本样式 */
+.win-basic-titlebar {
+    /* 基本宽高设置 */
+    width: 100%;
+
+    /* 标题栏的外观风格设置 */
+    background-color: aquamarine;
+    border-bottom: 1px solid gray;
+}
+
+/* 窗口中标题栏内的窗口图标基本样式 */
+.win-basic-icon {
+    width: 32px;
+    height: 32px;
+    display: inline-block;
+    margin: 4px 0 0 4px;
+}
+
+/* 窗口中标题栏内的标题基本样式 */
+.win-basic-title-text > span {
+    position: relative;
+    left: 2px;
+    top: -10px;
+    font-family: 'Microsoft YaHei', 'Courier New', Courier, monospace;
+    font-size: 0.7em;
+}
+
+/* 关闭窗口的关闭按钮基本样式 */
+.win-basic-close-button {
+    width: 24px;
+    height: 24px;
+    float: right;
+    border: 1px solid gray;
+    margin: 8px 8px 0 0;
+}
+
+/* 窗口内容区域的基本样式 */
+.win-basic-content-area {
+    margin: auto;
+}
